@@ -1,0 +1,20 @@
+<!--
+ DTD for use with generated XML pages
+-->
+<!ENTITY nbsp   "">
+
+<!-- General Punctuation -->
+<!ENTITY ndash   "&#8211;">
+<!ENTITY lsquo   "&#8216;">
+<!ENTITY rsquo   "&#8217;">
+<!ENTITY ldquo   "&#8220;">
+<!ENTITY rdquo   "&#8221;">
+
+<!-- Arrows -->
+<!ENTITY larr    "&#8592;">
+<!ENTITY uarr    "&#8593;">
+<!ENTITY rarr    "&#8594;">
+<!ENTITY darr    "&#8595;">
+<!ENTITY harr    "&#8596;">
+
+
