@@ -4,6 +4,8 @@
 <!ENTITY nbsp   "">
 
 <!-- General Punctuation -->
+<!ENTITY hellip  "&#8230;">
+<!ENTITY mdash   "&#8212;">
 <!ENTITY ndash   "&#8211;">
 <!ENTITY lsquo   "&#8216;">
 <!ENTITY rsquo   "&#8217;">
@@ -16,5 +18,4 @@
 <!ENTITY rarr    "&#8594;">
 <!ENTITY darr    "&#8595;">
 <!ENTITY harr    "&#8596;">
-
 

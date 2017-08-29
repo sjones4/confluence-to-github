@@ -8,8 +8,8 @@ Transform the image mapping xml to some bash commands
 
   <xsl:output method="text"/>
 
-  <xsl:template match="/"><xsl:for-each select="images/image">mkdir -p out/wiki/$(dirname <xsl:value-of select="@path"/>)
-cp <xsl:value-of select="@attachment"/> out/wiki/<xsl:value-of select="@path"/><xsl:text>
+  <xsl:template match="/"><xsl:for-each select="images/image">mkdir -p out/wiki/$(dirname '<xsl:value-of select="@path"/>')
+cp '<xsl:value-of select="@attachment"/>' 'out/wiki/<xsl:value-of select="@path"/><xsl:text>'
 </xsl:text>
     </xsl:for-each>
   </xsl:template>

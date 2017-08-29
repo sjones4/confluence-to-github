@@ -5,7 +5,7 @@
 
 echo "Creating output directories"
 mkdir -pv out/page-xml
-mkdir -pv out/wiki/images/services
+mkdir -pv out/wiki/images
 
 echo "Generating page xmls and image mapping"
 xsltproc entities.xsl entities.xml

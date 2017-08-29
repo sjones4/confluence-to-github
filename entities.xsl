@@ -11,8 +11,8 @@ Transform a Confluence XML format space export to multiple xml pages.
   <xsl:output method="xml" standalone="yes" indent="yes"/>
 
   <xsl:param name="output-path" select="'out/'" />
-  <xsl:param name="space" select="'services'" />
-  <xsl:param name="space-category" select="'services-team'" />
+  <xsl:param name="space" select="'storage'" />
+  <xsl:param name="space-category" select="'storage-team'" />
 
   <xsl:template match="@*|node()" priority="-1">
     <xsl:copy>
@@ -78,9 +78,10 @@ Transform a Confluence XML format space export to multiple xml pages.
   </xsl:template>
 
   <xsl:template match="id" mode="image">
-    <!-- TODO handle attachment version? -->
     <xsl:variable name="attachment-id" select="string(text())"/>
-    <image attachment="attachments/{../../../id}/{$attachment-id}/1" path="images/{$space}/{/hibernate-generic/object[@class='Attachment' and id = $attachment-id]/property[@name = 'title']}"/>
+    <xsl:if test="/hibernate-generic/object[@class='Attachment' and id = $attachment-id and '' = property[@name = 'originalVersionId']]">
+    <image attachment="attachments/{../../../id}/{$attachment-id}/{/hibernate-generic/object[@class='Attachment' and id = $attachment-id]/property[@name = 'version']}" path="images/{$space}/{/hibernate-generic/object[@class='Attachment' and id = $attachment-id]/property[@name = 'title']}"/>
+    </xsl:if>
   </xsl:template>
   
   <xsl:template match="/">
