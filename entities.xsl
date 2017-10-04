@@ -71,7 +71,9 @@ Transform a Confluence XML format space export to multiple xml pages.
           <xsl:with-param name="by" select="']]>'" />
         </xsl:call-template>
         </body> 
+        <xsl:if test="$space-category">
         <category><xsl:value-of select="$space-category"/></category>
+        </xsl:if>
         <category>confluence</category>
      </page>
     </exsl:document>
