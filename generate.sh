@@ -3,6 +3,8 @@
 # Generate github markdown pages from confluence export
 ########################################################################
 
+set -e
+
 echo "Creating output directories"
 mkdir -pv out/page-xml
 mkdir -pv out/wiki/images
