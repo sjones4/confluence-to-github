@@ -1,0 +1,9 @@
+*~
+*.sw*
+*.#*
+\#*#
+
+attachments/
+entities.xml
+exportDescriptor.properties
+out/
