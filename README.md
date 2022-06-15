@@ -1,6 +1,17 @@
 # Confluence space to github markdown pages
 Convert a confluence space export in XML format to github markdown pages
 
+## Installation Requirements
+
+Requires
+[xsltproc](https://gitlab.gnome.org/GNOME/libxslt/-/wikis/home) to be
+installed, e.g. on Debian, Ubuntu or derivatives call with root
+permissions:
+
+```
+apt install xsltproc
+```
+
 ## To export a space from confluence
 1. In confluence, navigate to Space Tools / Content Tools / Export and choose XML format
 2. Download the export zip and unzip
