@@ -18,7 +18,7 @@ echo "Convert page xmls to github markdown"
 for PAGE_PATH in out/page-xml/*.xml; do 
    PAGE_XML=${PAGE_PATH##out/page-xml/}
    PAGE_MD=${PAGE_XML%%.xml}.md
-   xsltproc page.xsl "${PAGE_PATH}" > "out/wiki/${PAGE_MD}"
+   xsltproc --path . page.xsl "${PAGE_PATH}" > "out/wiki/${PAGE_MD}"
 done
 
 echo "Content generated to out/wiki"
