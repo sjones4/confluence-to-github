@@ -13,6 +13,7 @@ Transform a Confluence XML format space export to multiple xml pages.
   <xsl:param name="output-path" select="'out/'" />
   <xsl:param name="space" select="'storage'" />
   <xsl:param name="space-category" select="'storage-team'" />
+  <xsl:param name="dtd-path" select="'page.dtd'" />
 
   <xsl:template match="@*|node()" priority="-1">
     <xsl:copy>
@@ -55,7 +56,7 @@ Transform a Confluence XML format space export to multiple xml pages.
     -->
     <xsl:variable name="was" select="' \/:*?\|&quot;&lt;&gt;'"/>
     <xsl:variable name="now" select="'-----------'"/>
-    <exsl:document href="{$output-path}/page-xml/{translate(property[@name='title'],$was,$now)}.xml" format="xml" standalone="no" indent="yes" doctype-system="../../page.dtd">
+    <exsl:document href="{$output-path}/page-xml/{translate(property[@name='title'],$was,$now)}.xml" format="xml" standalone="no" indent="yes" doctype-system="{$dtd-path}">
       <page 
         xmlns:ac="http://www.atlassian.com/schema/confluence/4/ac/"
         xmlns:ri="http://www.atlassian.com/schema/confluence/4/ri/"
